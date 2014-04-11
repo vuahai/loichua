@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head lang="en">
+    <meta charset="UTF-8">
+    <title></title>
+    <script src="jquery/jquery-1.11.0.min.js"></script>
+    <script>
+        $(document).ready(function(){
+
+                $.getJSON("json/package.json",function(result){
+                    $.each(result, function(key, value){
+                        if (key=="1chapter"){$("#1chapter").append(value)}
+                        if (key=="1reading"){$("#1reading").append(value);
+                        }
+                    });
+                });
+            });
+
+    </script>
+</head>
+<body>
+<div id="1chapter"></div>
+<div id="1reading"></div>
+</body>
+</html>
